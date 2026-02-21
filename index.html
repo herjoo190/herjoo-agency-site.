@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herjoo Online Solutions | Premium Digital Agency in South Africa</title>
+    <meta name="description"
+        content="Herjoo Online Solutions is a leading digital marketing agency in South Africa specializing in high-end SEO, PPC, and content strategy for premium brands.">
+
+    <!-- Google Fonts: Cormorant Garamond (Luxury) & Outfit (Professional Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-choc-dark text-cream font-body selection:bg-bronze selection:text-choc-dark">
+
+    <!-- Premium Floating Navbar -->
+    <nav id="navbar" class="fixed top-6 left-6 right-6 z-50 transition-all duration-500">
+        <div
+            class="max-w-7xl mx-auto px-8 py-5 bg-choc-rich/80 backdrop-blur-xl rounded-[2rem] border border-bronze/15 shadow-2xl flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-11 bg-bronze rounded-xl flex items-center justify-center shadow-lg shadow-bronze/20">
+                    <svg class="size-6 text-choc-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24"
+                        height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <span class="font-heading font-bold text-3xl tracking-tight text-bronze uppercase">HERJOO ONLINE
+                    SOLUTIONS</span>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#home"
+                    class="text-sm font-semibold uppercase tracking-widest hover:text-bronze transition-colors cursor-pointer text-bronze">Home</a>
+                <div class="relative group">
+                    <button
+                        class="text-sm font-semibold uppercase tracking-widest hover:text-bronze transition-colors cursor-pointer flex items-center gap-2">
+                        Services
+                        <svg class="size-4 group-hover:rotate-180 transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Desktop Dropdown -->
+                    <div
+                        class="absolute top-full left-0 mt-4 w-72 bg-choc-rich/95 backdrop-blur-2xl rounded-2xl border border-bronze/20 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                        <div class="py-4">
+                            <a href="#services"
+                                class="block px-6 py-4 hover:bg-bronze/10 transition-colors text-xs font-black uppercase tracking-widest">Google
+                                Ads Management</a>
+                            <a href="#services"
+                                class="block px-6 py-4 hover:bg-bronze/10 transition-colors text-xs font-black uppercase tracking-widest">Landing
+                                Page Design</a>
+                            <a href="#services"
+                                class="block px-6 py-4 hover:bg-bronze/10 transition-colors text-xs font-black uppercase tracking-widest">Click
+                                Protect</a>
+                            <a href="#services"
+                                class="block px-6 py-4 hover:bg-bronze/10 transition-colors text-xs font-black uppercase tracking-widest">Competitor
+                                Analysis</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#portfolio"
+                    class="text-sm font-semibold uppercase tracking-widest hover:text-bronze transition-colors cursor-pointer">Studio</a>
+                <a href="#about"
+                    class="text-sm font-semibold uppercase tracking-widest hover:text-bronze transition-colors cursor-pointer">Strategy</a>
+                <a href="#contact"
+                    class="bg-bronze text-choc-dark px-8 py-3 rounded-full text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all duration-500 shadow-xl cursor-pointer">Consult
+                    Now</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button
+                class="lg:hidden size-11 flex items-center justify-center rounded-xl bg-bronze/10 text-bronze border border-bronze/20 cursor-pointer"
+                aria-label="Toggle menu">
+                <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 right-0 mt-4 mx-6 p-8 bg-choc-rich/95 backdrop-blur-2xl rounded-[2rem] border border-bronze/20 shadow-2xl flex-col gap-8 lg:hidden animate-fade-in">
+            <a href="#home"
+                class="text-xl font-heading font-bold text-white uppercase tracking-widest hover:text-bronze transition-colors text-bronze">Home</a>
+            <div class="flex flex-col gap-6">
+                <button id="mobile-services-toggle"
+                    class="text-xl font-heading font-bold text-white uppercase tracking-widest hover:text-bronze transition-colors flex items-center justify-between">
+                    Services
+                    <svg id="mobile-services-arrow" class="size-5 transition-transform duration-300" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="mobile-services-dropdown" class="hidden flex-col gap-4 pl-4 border-l border-bronze/20">
+                    <a href="#services" class="text-sm uppercase tracking-widest hover:text-bronze">Google Ads
+                        Management</a>
+                    <a href="#services" class="text-sm uppercase tracking-widest hover:text-bronze">Landing Page
+                        Design</a>
+                    <a href="#services" class="text-sm uppercase tracking-widest hover:text-bronze">Click Protect</a>
+                    <a href="#services" class="text-sm uppercase tracking-widest hover:text-bronze">Competitor
+                        Analysis</a>
+                </div>
+            </div>
+            <a href="#portfolio"
+                class="text-xl font-heading font-bold text-white uppercase tracking-widest hover:text-bronze transition-colors">Studio</a>
+            <a href="#about"
+                class="text-xl font-heading font-bold text-white uppercase tracking-widest hover:text-bronze transition-colors">Strategy</a>
+            <hr class="border-bronze/20">
+            <a href="#contact"
+                class="bg-bronze text-choc-dark px-8 py-5 rounded-full text-center font-black uppercase tracking-widest hover:bg-white transition-all">Consult
+                Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Indulgent Growth -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-8 overflow-hidden">
+        <!-- Luxury Ambient Light -->
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute top-[-10%] right-[-10%] size-[600px] bg-bronze/10 blur-[150px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] size-[500px] bg-caramel/5 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10 animate-fade-up">
+                <div
+                    class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-bronze/5 border border-bronze/20">
+                    <span class="size-2 bg-bronze rounded-full"></span>
+                    <span class="text-[12px] font-black uppercase tracking-[0.3em] text-bronze">Online Solutions for the
+                        Modern Era</span>
+                </div>
+
+                <h1 class="text-6xl md:text-8xl font-heading font-bold leading-[0.95] tracking-tight text-white mb-6">
+                    The Anti-Agency <br>
+                    <span class="italic text-bronze">Google Ads Specialist.</span>
+                </h1>
+
+                <h2 class="text-3xl md:text-4xl font-heading font-medium text-white mb-6">
+                    Real Results, <span class="italic text-bronze">Transparent Pricing.</span>
+                </h2>
+
+                <p class="text-xl md:text-2xl text-mocha font-light leading-relaxed max-w-xl">
+                    You get a dedicated specialist who treats your budget like it's my own. For over a decade, I've used
+                    this transparent, flat-rate approach to get real results for businesses from the USA to the UK. Your
+                    success is the only metric that matters.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 items-center pt-8">
+                    <a href="#contact"
+                        class="btn-luxury w-full sm:w-auto bg-bronze text-choc-dark px-12 py-5 rounded-full text-sm font-black uppercase tracking-[0.2em] hover:bg-white hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] transition-all duration-500 cursor-pointer text-center">
+                        Get a Free, Honest Proposal
+                    </a>
+                    <a href="#portfolio"
+                        class="w-full sm:w-auto border border-bronze/30 text-bronze px-12 py-5 rounded-full text-sm font-black uppercase tracking-[0.2em] hover:bg-bronze/10 transition-all duration-500 cursor-pointer text-center">
+                        The Studio
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <!-- Decorative Frame -->
+                <div class="absolute -inset-4 border border-bronze/20 rounded-[3rem] -z-10 translate-x-4 translate-y-4">
+                </div>
+                <div class="bg-choc-rich p-4 rounded-[2.5rem] shadow-2xl overflow-hidden group">
+                    <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+                            alt="Herjoo Data Strategy"
+                            class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000">
+                        <div class="absolute inset-0 bg-linear-to-t from-choc-dark via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="text-3xl font-heading font-bold text-white mb-2">Digital Architecture</h3>
+                            <p class="text-bronze uppercase tracking-[0.2em] text-[12px] font-black">Strategic Data •
+                                High Contrast ROI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narrative Section: The Anti-Agency Difference -->
+    <section id="strategy" class="py-32 px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-24 items-start">
+                <div class="space-y-12">
+                    <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">The Difference</h2>
+                    <h3 class="text-5xl md:text-7xl font-heading font-bold leading-tight text-white">The Agency
+                        <br>Runaround <span class="text-bronze italic">Ends Here.</span>
+                    </h3>
+                    <p class="text-xl md:text-2xl text-mocha font-light leading-relaxed">
+                        You've likely dealt with digital agencies before. If you're here, it's probably because you're
+                        tired of the same old story. Here’s how I’m different.
+                    </p>
+                </div>
+
+                <div class="space-y-10">
+                    <!-- Comparison 1 -->
+                    <div
+                        class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-bronze/30 transition-colors">
+                        <div class="mb-4">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-mocha/50 mb-2">The Agency
+                                Problem</h4>
+                            <p class="text-white font-heading text-2xl">The 12-Month Lock-In</p>
+                        </div>
+                        <div class="pl-6 border-l-2 border-bronze">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-bronze mb-2">My Solution</h4>
+                            <p class="text-mocha font-light">No Long-Term Contracts. I earn your business every month.
+                                If you're not seeing a positive ROI, you're free to walk away.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comparison 2 -->
+                    <div
+                        class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-bronze/30 transition-colors">
+                        <div class="mb-4">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-mocha/50 mb-2">The Agency
+                                Problem</h4>
+                            <p class="text-white font-heading text-2xl">The Bait-and-Switch</p>
+                        </div>
+                        <div class="pl-6 border-l-2 border-bronze">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-bronze mb-2">My Solution</h4>
+                            <p class="text-mocha font-light">You Work Directly With Me. I am the specialist who will
+                                personally plan, build, and manage your campaigns.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comparison 3 -->
+                    <div
+                        class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-bronze/30 transition-colors">
+                        <div class="mb-4">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-mocha/50 mb-2">The Agency
+                                Problem</h4>
+                            <p class="text-white font-heading text-2xl">The Conflict of Interest</p>
+                        </div>
+                        <div class="pl-6 border-l-2 border-bronze">
+                            <h4 class="text-sm font-black uppercase tracking-widest text-bronze mb-2">My Solution</h4>
+                            <p class="text-mocha font-light">Transparent Flat-Rate Pricing. My only incentive is to make
+                                your business money, not to increase your ad spend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies: The Proof -->
+    <section id="portfolio" class="py-32 px-8 bg-choc-rich/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-24 gap-10">
+                <div class="space-y-4">
+                    <h2 class="text-xs font-black uppercase tracking-[0.4em] text-bronze">The Proof</h2>
+                    <h3 class="text-5xl md:text-7xl font-heading font-bold text-white">Results in <span
+                            class="text-bronze italic">Plain Sight.</span></h3>
+                </div>
+            </div>
+
+            <div class="space-y-32">
+                <!-- Case Study 1 -->
+                <div class="grid lg:grid-cols-2 gap-16 items-center group">
+                    <div
+                        class="aspect-[4/3] rounded-[2.5rem] overflow-hidden bg-choc-rich border border-white/5 shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+                            alt="Data Dashboard"
+                            class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000">
+                        <div class="absolute inset-0 bg-linear-to-t from-choc-dark/90 via-transparent to-transparent">
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-4">
+                            <span class="text-bronze font-heading text-6xl font-bold">40%</span>
+                            <span
+                                class="text-white uppercase tracking-widest text-sm font-bold max-w-[120px] leading-tight">Reduction
+                                in Ad Fraud</span>
+                        </div>
+                        <h4 class="text-4xl font-heading font-bold text-white leading-tight">Eliminating the <br><span
+                                class="italic text-bronze">Bot Traffic Tax.</span></h4>
+                        <p class="text-mocha font-light text-lg leading-relaxed">
+                            A standardized audit revealed that 40% of this client's budget was being drained by bot
+                            clicks. We implemented Click Protect, reclaimed that budget, and reinvested it into
+                            high-intent keywords. The result? Same spend, double the conversions.
+                        </p>
+                        <div class="flex gap-4 pt-4">
+                            <span
+                                class="px-6 py-2 rounded-full border border-white/10 text-xs font-black uppercase tracking-widest text-mocha/60">Audit</span>
+                            <span
+                                class="px-6 py-2 rounded-full border border-white/10 text-xs font-black uppercase tracking-widest text-mocha/60">Click
+                                Protect</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="grid lg:grid-cols-2 gap-16 items-center group lg:flex-row-reverse">
+                    <div class="space-y-8 lg:order-1">
+                        <div class="flex items-center gap-4">
+                            <span class="text-bronze font-heading text-6xl font-bold">500%</span>
+                            <span
+                                class="text-white uppercase tracking-widest text-sm font-bold max-w-[120px] leading-tight">Return
+                                on Ad Spend</span>
+                        </div>
+                        <h4 class="text-4xl font-heading font-bold text-white leading-tight">Scaling from <br><span
+                                class="italic text-bronze">Struggle to Stability.</span></h4>
+                        <p class="text-mocha font-light text-lg leading-relaxed">
+                            This client was burning cash on broad match keywords with no negative keyword strategy. We
+                            rebuilt the account structure from the ground up, focused on "Alpha" high-intent terms, and
+                            scaled their ROAS to 500% in 90 days.
+                        </p>
+                        <div class="flex gap-4 pt-4">
+                            <span
+                                class="px-6 py-2 rounded-full border border-white/10 text-xs font-black uppercase tracking-widest text-mocha/60">PPC
+                                Strategy</span>
+                            <span
+                                class="px-6 py-2 rounded-full border border-white/10 text-xs font-black uppercase tracking-widest text-mocha/60">Optimization</span>
+                        </div>
+                    </div>
+                    <div
+                        class="aspect-[4/3] rounded-[2.5rem] overflow-hidden bg-choc-rich border border-white/5 shadow-2xl relative lg:order-2">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+                            alt="Growth Chart"
+                            class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000">
+                        <div class="absolute inset-0 bg-linear-to-t from-choc-dark/90 via-transparent to-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section: The Secret Sauce -->
+    <section id="services" class="py-48 px-8">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">Expertise</h2>
+            <h3 class="text-5xl md:text-8xl font-heading font-bold leading-tight text-white">Results First. <br><span
+                    class="italic text-bronze">Data Always.</span></h3>
+            <p class="text-xl md:text-2xl text-mocha font-light leading-relaxed">
+                You need more than just a website. You need a growth engine. Our methodology combines psychological
+                precision with technical expertise to win you the market share you deserve.
+            </p>
+
+            <div
+                class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 rounded-[3rem] overflow-hidden mt-20">
+                <!-- Service 1 -->
+                <div
+                    class="p-10 bg-choc-dark hover:bg-choc-rich transition-colors duration-500 text-left space-y-4 group">
+                    <span
+                        class="text-bronze text-2xl block opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+                    <h4 class="text-xl font-heading font-bold text-white">Google Ads Management</h4>
+                    <p class="text-mocha/60 font-light text-sm">Strategic campaign management focused on high-intent
+                        keywords and maximum ROI. No wasted spend.</p>
+                </div>
+                <!-- Service 2 -->
+                <div
+                    class="p-10 bg-choc-dark hover:bg-choc-rich transition-colors duration-500 text-left space-y-4 group">
+                    <span
+                        class="text-bronze text-2xl block opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+                    <h4 class="text-xl font-heading font-bold text-white">Landing Page Design</h4>
+                    <p class="text-mocha/60 font-light text-sm">High-converting designs engineered to turn traffic into
+                        leads. Fast, mobile-optimized, and persuasive.</p>
+                </div>
+                <!-- Service 3 -->
+                <div
+                    class="p-10 bg-choc-dark hover:bg-choc-rich transition-colors duration-500 text-left space-y-4 group">
+                    <span
+                        class="text-bronze text-2xl block opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+                    <h4 class="text-xl font-heading font-bold text-white">Click Protect</h4>
+                    <p class="text-mocha/60 font-light text-sm">Advanced ad fraud prevention to ensure your budget goes
+                        to real people, not bots.</p>
+                </div>
+                <!-- Service 4 -->
+                <div
+                    class="p-10 bg-choc-dark hover:bg-choc-rich transition-colors duration-500 text-left space-y-4 group">
+                    <span
+                        class="text-bronze text-2xl block opacity-50 group-hover:opacity-100 transition-opacity">04</span>
+                    <h4 class="text-xl font-heading font-bold text-white">Competitor Analysis</h4>
+                    <p class="text-mocha/60 font-light text-sm">Deep-dive intelligence into what your competitors are
+                        doing, so we can do it better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section: How I Work -->
+    <section id="process" class="py-32 px-8 overflow-hidden bg-choc-rich/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 space-y-6">
+                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">The Process</h2>
+                <h3 class="text-5xl md:text-7xl font-heading font-bold text-white">Engineering <span
+                        class="italic text-bronze">Success.</span></h3>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="space-y-4 relative">
+                    <div class="text-8xl font-heading font-bold text-white/5 absolute -top-10 -left-6 z-0">01</div>
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-bold text-white uppercase tracking-widest mb-3">The Audit</h4>
+                        <p class="text-mocha/70 font-light text-sm leading-relaxed">I look under the hood. I find the
+                            wasted spend, the missed opportunities, and the broken tracking. No fluff, just hard data.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="space-y-4 relative">
+                    <div class="text-8xl font-heading font-bold text-white/5 absolute -top-10 -left-6 z-0">02</div>
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-bold text-white uppercase tracking-widest mb-3">The Strategy</h4>
+                        <p class="text-mocha/70 font-light text-sm leading-relaxed">I build the blueprint. A custom
+                            roadmap designed for your specific market position and ROI goals. We don't guess, we
+                            engineer.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="space-y-4 relative">
+                    <div class="text-8xl font-heading font-bold text-white/5 absolute -top-10 -left-6 z-0">03</div>
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-bold text-white uppercase tracking-widest mb-3">The Execution</h4>
+                        <p class="text-mocha/70 font-light text-sm leading-relaxed">I pull the levers. I personally
+                            build out the campaigns, design the landing pages, and set up the tracking infrastructure.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="space-y-4 relative">
+                    <div class="text-8xl font-heading font-bold text-white/5 absolute -top-10 -left-6 z-0">04</div>
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-bold text-white uppercase tracking-widest mb-3">The Optimization</h4>
+                        <p class="text-mocha/70 font-light text-sm leading-relaxed">I refine the machine. Constant
+                            monitoring and tweaking to lower your CPA and increase your conversion rate. The work never
+                            stops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section: Trust -->
+    <section class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 space-y-6">
+                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">The Verdict</h2>
+                <h3 class="text-5xl md:text-7xl font-heading font-bold text-white">Unfiltered <span
+                        class="italic text-bronze">Feedback.</span></h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-dark p-10 rounded-[2.5rem] border border-white/5 space-y-6">
+                    <div class="flex text-bronze text-sm gap-1">
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-mocha/80 italic font-light leading-relaxed">"Finally, an ads manager who actually
+                        does the work. No account managers, no jargon. Just lower CPAs and better communication. A
+                        breath of fresh air."</p>
+                    <div>
+                        <p class="text-white font-heading font-bold">Sarah Jenkins</p>
+                        <p class="text-[10px] uppercase tracking-widest text-bronze">Marketing Director, FinTech Co.</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="glass-dark p-10 rounded-[2.5rem] border border-white/5 space-y-6 mt-0 md:mt-12">
+                    <div class="flex text-bronze text-sm gap-1">
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-mocha/80 italic font-light leading-relaxed">"Flat-rate pricing was a huge selling
+                        point for us. We know exactly what we're paying, and every extra dollar of revenue goes straight
+                        to our bottom line."</p>
+                    <div>
+                        <p class="text-white font-heading font-bold">Michael Ross</p>
+                        <p class="text-[10px] uppercase tracking-widest text-bronze">Founder, MR Properties</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="glass-dark p-10 rounded-[2.5rem] border border-white/5 space-y-6 md:block hidden lg:block">
+                    <div class="flex text-bronze text-sm gap-1">
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="size-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-mocha/80 italic font-light leading-relaxed">"The level of transparency is unmatched.
+                        I finally feel like I have a partner in my business growth rather than just another vendor
+                        sending me invoices."</p>
+                    <div>
+                        <p class="text-white font-heading font-bold">David Chen</p>
+                        <p class="text-[10px] uppercase tracking-widest text-bronze">Director, Chen Enterprises</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section: Clarity -->
+    <section class="py-32 px-8 bg-choc-rich/20">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">Common Questions</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Radical <span
+                        class="italic text-bronze">Transparency.</span></h3>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-white/5 border border-white/5 rounded-3xl p-8 hover:border-bronze/30 transition-colors">
+                    <h4 class="text-xl font-heading font-bold text-white mb-4">Why no long-term contracts?</h4>
+                    <p class="text-mocha font-light leading-relaxed">Because I believe results should keep you here, not
+                        a piece of paper. If I'm not making you money, you should be free to leave. It keeps me sharp
+                        and your risk low.</p>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-white/5 border border-white/5 rounded-3xl p-8 hover:border-bronze/30 transition-colors">
+                    <h4 class="text-xl font-heading font-bold text-white mb-4">How does flat-rate pricing work?</h4>
+                    <p class="text-mocha font-light leading-relaxed">Most agencies charge a % of your ad spend,
+                        incentivizing them to make you spend more. I charge a flat monthly fee based on the complexity
+                        of your account. My only incentive is efficiency.</p>
+                </div>
+                <!-- Q3 -->
+                <div class="bg-white/5 border border-white/5 rounded-3xl p-8 hover:border-bronze/30 transition-colors">
+                    <h4 class="text-xl font-heading font-bold text-white mb-4">What is Click Protect?</h4>
+                    <p class="text-mocha font-light leading-relaxed">It's a security layer I deploy on all accounts to
+                        identify and block invalid traffic (bots, competitors, scrapers). This typically saves 20-30% of
+                        ad spend immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: The Specialist -->
+    <section id="about" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl relative">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                    alt="Herman - The Specialist"
+                    class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-1000">
+                <div class="absolute inset-0 bg-linear-to-t from-choc-dark/80 via-transparent to-transparent"></div>
+            </div>
+            <div class="space-y-10">
+                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-bronze">The Specialist</h2>
+                <h3 class="text-5xl md:text-7xl font-heading font-bold leading-tight text-white">Not a Salesman.
+                    <br><span class="italic text-bronze">A Builder.</span>
+                </h3>
+                <div class="space-y-6 text-xl text-mocha font-light leading-relaxed">
+                    <p>
+                        I don't have a sales team. I don't have account managers. When you hire Herjoo Online Solutions,
+                        you hire me.
+                    </p>
+                    <p>
+                        With over a decade of experience managing campaigns from the UK to the USA, I've learned that
+                        the biggest bottleneck to success is the game of "telephone" between the client and the person
+                        actually doing the work.
+                    </p>
+                    <p>
+                        I removed the middleman. I work with a capped number of clients to ensure that every account
+                        gets my full, undivided attention. Your growth is my personal project.
+                    </p>
+                </div>
+                <div class="pt-6">
+                    <p class="font-heading text-3xl text-white">Herman <span class="text-bronze italic">Jooste</span>
+                    </p>
+                    <p class="text-sm uppercase tracking-widest text-mocha/50 mt-2">Founder & Lead Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: The Inward Circle -->
+    <footer id="contact" class="bg-choc-rich pb-12 px-8 pt-32 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-bronze/30 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-32 items-center">
+            <div class="space-y-12">
+                <h2 class="text-6xl md:text-8xl font-heading font-bold text-white leading-[0.9]">Start Your <br><span
+                        class="text-bronze italic">Legacy.</span></h2>
+                <div class="space-y-6">
+                    <p class="flex items-center gap-6 text-xl text-mocha font-light">
+                        <span class="size-px w-12 bg-bronze"></span>
+                        info@herjoo.co.za
+                    </p>
+                    <p class="flex items-center gap-6 text-xl text-mocha font-light">
+                        <span class="size-px w-12 bg-bronze"></span>
+                        +27 079 607 2812
+                    </p>
+                </div>
+            </div>
+
+            <form class="glass-dark p-8 md:p-12 rounded-[3.5rem] space-y-8">
+                <div class="space-y-2">
+                    <label class="text-[12px] font-black uppercase tracking-[0.3em] text-bronze">The Name</label>
+                    <input type="text"
+                        class="w-full bg-white/5 border-b border-white/10 px-0 py-4 focus:border-bronze outline-none transition-all text-white font-heading text-2xl placeholder:text-white/10"
+                        placeholder="e.g. Alexander Cross">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[12px] font-black uppercase tracking-[0.3em] text-bronze">The Liaison</label>
+                    <input type="email"
+                        class="w-full bg-white/5 border-b border-white/10 px-0 py-4 focus:border-bronze outline-none transition-all text-white font-heading text-2xl placeholder:text-white/10"
+                        placeholder="e.g. alex@prestige.co.za">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[12px] font-black uppercase tracking-[0.3em] text-bronze">The Ambition</label>
+                    <textarea rows="2"
+                        class="w-full bg-white/5 border-b border-white/10 px-0 py-4 focus:border-bronze outline-none transition-all text-white font-heading text-2xl placeholder:text-white/10"
+                        placeholder="Briefly describe your goals..."></textarea>
+                </div>
+                <button type="submit"
+                    class="btn-luxury w-full bg-bronze text-choc-dark py-6 rounded-full font-black uppercase tracking-[0.3em] text-[12px] hover:bg-white transition-all cursor-pointer">
+                    Request Integration
+                </button>
+            </form>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto mt-40 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 opacity-40">
+            <p class="text-[12px] font-black uppercase tracking-[0.2em] mb-4 md:mb-0">© 2026 Herjoo Online Solutions.
+                All
+                Rights Reserved.</p>
+            <div class="flex gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="terms.html" class="hover:text-bronze transition-colors">Terms & Conditions</a>
+                <a href="#" class="hover:text-bronze transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
